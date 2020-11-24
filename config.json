@@ -1,0 +1,21 @@
+{
+  "params":{
+    "local_server": "True",
+    "local_uri":"mysql://root:@localhost/flaskblog",
+    "prod_uri": "mysql://root:@localhost/flaskblog",
+    "tw_url": "https://www.twitter.com/creativesoftnepal",
+    "fb_url": "https://www.facebook.com/creativesoftnepal",
+    "git_url": "https://www.github.com/creativesoftnepal",
+    "blog_name": "Clean Blog By Anup",
+    "blog_title": "Programmer Blog",
+    "blog_theme": "This is A Blog page Using Flask Python",
+    "blog_cpr": "Clean Blog By Anup 2020",
+    "gmail_user": "404mystery@gmail.com",
+    "gmail_password": "heckheck",
+    "about_content": "Hello, This is me Anup Jung Karki one of the most underrated programmer i am trying to buit a Blog web Application using Python Framework called flask hope you guys are enjoying reading awesome articles here if any doubght on blog please do contact me hai. Hello, This is me Anup Jung Karki one of the most underrated programmer i am trying to buit a Blog web Application using Python Framework called flask hope you guys are enjoying reading awesome articles here if any doubght on blog please do contact me hai.Hello, This is me Anup Jung Karki one of the most underrated programmer i am trying to buit a Blog web Application using Python Framework called flask hope you guys are enjoying reading awesome articles here if any doubght on blog please do contact me hai.",
+    "no_of_posts": 2,
+    "admin_user": "404mystery",
+    "admin_password": "heckheck",
+    "upload_location":"D:\\PYTHON TRAINING\\Flask\\static"
+  }
+}

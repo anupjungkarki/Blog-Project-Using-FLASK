@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+  {% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(' {{ url_for('static',filename='img/home-bg.jpg') }} ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h2>Admin Panel</h2>
+            <span class="subheading">Admin Panel For Clean Blog By Anup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+<hr>
+  <!-- Main Content -->
+<div class="container">
+  <h1>Upload File</h1>
+    <form action="/uploader" action="post" enctype="multipart/form-data">
+    	<input type="file" name="file1">
+    	<button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+ <hr>
+  <h1>Basic Actions</h1>
+     <a href="/edit/0"><button class="btn btn-primary">Add New Post</button></a>
+     <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+<hr>
+ <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Title</th>
+      <th scope="col">Date</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+ {%  for posts in post %}
+  <tbody>
+    <tr>
+      <th>{{posts.id}}</th>
+      <td>{{posts.title}}</td>
+      <td>{{posts.date}}</td>
+      <td>
+      	<a class="btn" href="/edit/{{posts.id}}">Edit</a>
+      	<a class="btn" href="/delete/{{posts.id}}">Delete</a>
+      </td>
+    </tr>
+  </tbody>
+{% endfor %}
+
+</table>
+
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

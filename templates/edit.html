@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+  {% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url(' {{ url_for('static',filename='img/home-bg.jpg') }} ')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h2>Admin Panel</h2>
+            <span class="subheading">Admin Panel For Clean Blog By Anup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+<div class="container">
+    <h1>Basic Actions</h1>
+     <a href="/dashboard"><button class="btn btn-primary">Dashboard</button></a>
+     <a href="/logout"><button class="btn btn-primary">Logout</button></a>
+     <hr>
+<h1>Add/Edit Post</h1>
+<form name="sentMessage" id="contactForm" action="/edit/{{id}}" method="post" novalidate>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Title</label>
+              <input type="text" class="form-control" placeholder="Title Here" id="title" name="title" required data-validation-required-message="Please enter your name." value="{{post.title}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Sub Heading</label>
+              <input type="text" class="form-control" placeholder="Sub Heading Here" id="sub_heading" name="sub_heading" required data-validation-required-message="Please enter your email address." value="{{post.sub_heading}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Slug</label>
+              <input type="text" class="form-control" placeholder="Slug Here" id="slug" name="slug" required data-validation-required-message="Please enter your phone number." value="{{post.slug}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group floating-label-form-group controls">
+              <label>Content</label>
+              <textarea rows="5" class="form-control" placeholder="Write Your Content Here" id="content" name="content" required data-validation-required-message="Please enter a message."> {{post.content}} </textarea>
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <div class="control-group">
+            <div class="form-group col-xs-12 floating-label-form-group controls">
+              <label>Image File</label>
+              <input type="file" class="form-control" placeholder="Upload Your Image" id="img_file" name="img_file" required data-validation-required-message="Please enter your phone number." value="{{post.img_file}}">
+              <p class="help-block text-danger"></p>
+            </div>
+          </div>
+          <br>
+          <div id="success"></div>
+          <button type="submit" class="btn btn-primary" id="sendMessageButton">Upload Content</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}
